@@ -20,3 +20,10 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+  fonts:
+    - family : archivo
+      fonts:
+        - asset: assets/fonts/Archivo_Black/ArchivoBlack-Regular.ttf
+    - family : lato
+      fonts:
+        - asset: assets/fonts/Lato/Lato-Regular.ttf
