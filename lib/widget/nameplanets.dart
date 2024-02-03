@@ -4,8 +4,8 @@ import 'package:provider/provider.dart';
 import '../provider/planets_provder.dart';
 
 class NamesPlanets extends StatelessWidget {
-  String namePlanet;
-  NamesPlanets({
+  final String namePlanet;
+  const NamesPlanets({
     super.key,
     required this.namePlanet,
   });

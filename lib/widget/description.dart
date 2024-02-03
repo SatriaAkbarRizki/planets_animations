@@ -3,8 +3,8 @@ import 'package:planets_animations/provider/planets_provder.dart';
 import 'package:provider/provider.dart';
 
 class DescriptionPlanet extends StatelessWidget {
-  String description;
-  DescriptionPlanet({super.key, required this.description});
+  final String description;
+  const DescriptionPlanet({super.key, required this.description});
 
   @override
   Widget build(BuildContext context) {

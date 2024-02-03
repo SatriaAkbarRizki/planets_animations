@@ -3,21 +3,25 @@ import 'package:planets_animations/model/imagemodel.dart';
 class Planets {
   static List<ImageModel> planetList = [
     ImageModel(
+        namePlanet: 'Sun',
+        image: 'assets/images/sun.png',
+        description:
+            "The Sun, a brilliant and vital star, is the radiant heart of our solar system. This colossal ball of hot, ionized gas sustains life on Earth by emitting light and heat through a continuous process of nuclear fusion. Its gravitational influence governs the orbits of planets, showcasing the Sun's pivotal role in maintaining the cosmic harmony of our celestial neighborhood."),
+    ImageModel(
         namePlanet: 'Mercury',
         image: 'assets/images/mercury.png',
         description:
-            "Earth, our vibrant blue marble suspended in the cosmos, is the only known planet to harbor life in its diverse ecosystems, from soaring mountain peaks to teeming ocean depths. Its dynamic atmosphere shields us from harmful radiation, nurturing a delicate balance that allows rainforests to teem, deserts to bloom, and glaciers to sculpt landscapes. As humanity's cradle and home, Earth's future hinges on our collective responsibility to protect its breathtaking beauty and fragile web of life."),
+            "Mercury: A Craterscape in Constant Flux Tiny, scorched by the sun's glare, races through its orbit every 88 days. Its barren, cratered surface endures wild temperature swings, from daytime highs hotter than ovens to nighttime chills colder than Antarctica. Though airless, its iron core hints at a dynamic past, with evidence of volcanic activity and a possible magnetic field."),
     ImageModel(
         namePlanet: 'Venus',
         image: 'assets/images/venus.png',
         description:
-            "Earth, our vibrant blue marble suspended in the cosmos, is the only known planet to harbor life in its diverse ecosystems, from soaring mountain peaks to teeming ocean depths. Its dynamic atmosphere shields us from harmful radiation, nurturing a delicate balance that allows rainforests to teem, deserts to bloom, and glaciers to sculpt landscapes. As humanity's cradle and home, Earth's future hinges on our collective responsibility to protect its breathtaking beauty and fragile web of life."),
+            "Venus: A Beauty Trapped in a Toxic Cauldron Beneath a swirling veil of sulfuric acid clouds, Venus hides a secret. Its surface, hotter than molten lead, is a volcanic wasteland, constantly reshaped by fiery eruptions. Yet, its thick atmosphere hints at a watery past, raising questions about what went wrong on this once potentially Earth-like world. Could Venus hold the key to understanding our own planet's future"),
     ImageModel(
         namePlanet: 'Earth',
         image: 'assets/images/earth.png',
         description:
             "Earth, our vibrant blue marble suspended in the cosmos, is the only known planet to harbor life in its diverse ecosystems, from soaring mountain peaks to teeming ocean depths. Its dynamic atmosphere shields us from harmful radiation, nurturing a delicate balance that allows rainforests to teem, deserts to bloom, and glaciers to sculpt landscapes. As humanity's cradle and home, Earth's future hinges on our collective responsibility to protect its breathtaking beauty and fragile web of life."),
-    
     ImageModel(
         namePlanet: 'Mars',
         image: 'assets/images/mars.png',

@@ -7,9 +7,9 @@ import 'nameplanets.dart';
 
 class Planetss extends StatefulWidget {
   final int indexOld, indexNow;
-  String image, namePlanet, description;
+  final String image, namePlanet, description;
 
-  Planetss(
+  const Planetss(
       {super.key,
       required this.indexOld,
       required this.indexNow,
@@ -103,7 +103,7 @@ class _PlanetssState extends State<Planetss> with TickerProviderStateMixin {
           ),
         ),
         Positioned(
-          right: 40,
+          right: widget.namePlanet.length > 3 ? 40 : 80,
           top: 180,
           child: NamesPlanets(
             namePlanet: widget.namePlanet,

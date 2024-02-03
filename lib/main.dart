@@ -15,9 +15,9 @@ class MainApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => PlanetsProvider(),
       child: MaterialApp(
-        theme: ThemeData.dark(),
+        theme: ThemeData(scaffoldBackgroundColor: const Color(0xff29282e)),
         debugShowCheckedModeBanner: false,
-        home: GalaxyPlanets(),
+        home: const GalaxyPlanets(),
       ),
     );
   }
