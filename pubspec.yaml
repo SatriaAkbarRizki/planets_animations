@@ -27,3 +27,6 @@ flutter:
     - family : lato
       fonts:
         - asset: assets/fonts/Lato/Lato-Regular.ttf
+    - family : Soupro
+      fonts:
+        - asset: assets/fonts/Source_Code_Pro/static/SourceCodePro-Regular.ttf

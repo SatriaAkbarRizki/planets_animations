@@ -7,38 +7,43 @@ import 'package:provider/provider.dart';
 import '../model/imagemodel.dart';
 
 class GalaxyPlanets extends StatelessWidget {
+  static String routeName = 'GalaxyScreen';
   const GalaxyPlanets({super.key});
 
   List<ImageModel> get _listPlanet => Planets.planetList;
 
   @override
   Widget build(BuildContext context) {
-    final doChangePage = Provider.of<PlanetsProvider>(context);
-    context.read<PlanetsProvider>();
+    final actions = Provider.of<PlanetsProvider>(context);
+
     return Scaffold(
-      body: Stack(
-        children: [
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Padding(
-              padding: const EdgeInsets.only(bottom: 30),
-              child: Indicator(
-                  position: doChangePage.indexPage,
-                  lengthPlanets: _listPlanet.length),
+      body: Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/space2.jpg"),
+                fit: BoxFit.fill)),
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 30),
+                child: Indicator(
+                    position: actions.indexPage,
+                    lengthPlanets: _listPlanet.length),
+              ),
             ),
-          ),
-          Expanded(
-            child: PageView.builder(
+            PageView.builder(
               onPageChanged: (value) {
-                if (doChangePage.indexPage != value) {
-                  doChangePage.changePage(value);
+                if (actions.indexPage != value) {
+                  actions.changePage(value);
                 }
               },
               itemCount: _listPlanet.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return Planetss(
-                  indexOld: doChangePage.indexPage,
+                  indexOld: actions.indexPage,
                   indexNow: index,
                   image: _listPlanet[index].image,
                   description: _listPlanet[index].description,
@@ -46,8 +51,20 @@ class GalaxyPlanets extends StatelessWidget {
                 );
               },
             ),
-          )
-        ],
+            Positioned(
+              top: 20,
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: IconButton(
+                    onPressed: () => Navigator.pop(context),
+                    icon: const Icon(
+                      Icons.arrow_back,
+                      color: Colors.white54,
+                    )),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

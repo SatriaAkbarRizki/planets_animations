@@ -1,13 +1,14 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/material.dart';
 
-class ImageModel {
+class ImageModel with ChangeNotifier {
   String namePlanet;
   String image;
   String description;
+  List<Color> colors;
 
-  ImageModel({
-    required this.namePlanet,
-    required this.image,
-    required this.description,
-  });
+  ImageModel(
+      {required this.namePlanet,
+      required this.image,
+      required this.description,
+      required this.colors});
 }

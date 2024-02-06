@@ -23,7 +23,6 @@ class Planetss extends StatefulWidget {
 
 class _PlanetssState extends State<Planetss> with TickerProviderStateMixin {
   late AnimationController controllerGeneral;
-
   late AnimationController controllerRotation;
 
   late final Animation<Offset> _animationplanet = Tween(
@@ -112,7 +111,7 @@ class _PlanetssState extends State<Planetss> with TickerProviderStateMixin {
         Positioned(
           top: MediaQuery.of(context).size.height / 1.8,
           child: DescriptionPlanet(description: widget.description),
-        )
+        ),
       ],
     );
   }
